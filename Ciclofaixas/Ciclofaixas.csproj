@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BA55E8A-7544-4460-B095-94BCD216A5C3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ciclofaixas</RootNamespace>
+    <AssemblyName>Ciclofaixas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atracoes.cs" />
+    <Compile Include="Bicicletas.cs" />
+    <Compile Include="BicicletasDAO.cs" />
+    <Compile Include="CadastrarAtracoesFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarAtracoesFORM.Designer.cs">
+      <DependentUpon>CadastrarAtracoesFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarBicicletasFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarBicicletasFORM.Designer.cs">
+      <DependentUpon>CadastrarBicicletasFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarCiclista_LocacaoFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarCiclista_LocacaoFORM.Designer.cs">
+      <DependentUpon>CadastrarCiclista_LocacaoFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarCiclofaixasFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarCiclofaixasFORM.Designer.cs">
+      <DependentUpon>CadastrarCiclofaixasFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarEstacoesFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarEstacoesFORM.Designer.cs">
+      <DependentUpon>CadastrarEstacoesFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarPessoaFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarPessoaFORM.Designer.cs">
+      <DependentUpon>CadastrarPessoaFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciclista_Locacao.cs" />
+    <Compile Include="Ciclista_locacaoDAO.cs" />
+    <Compile Include="Estacoes.cs" />
+    <Compile Include="EstacoesDAO.cs" />
+    <Compile Include="FisicaDAO.cs" />
+    <Compile Include="IDAO.cs" />
+    <Compile Include="JuridicaDAO.cs" />
+    <Compile Include="MuseusDAO.cs" />
+    <Compile Include="ParquesDAO.cs" />
+    <Compile Include="BD.cs" />
+    <Compile Include="Ciclofaixas.cs" />
+    <Compile Include="CiclofaixasDAO.cs" />
+    <Compile Include="Fisica.cs" />
+    <Compile Include="Juridica.cs" />
+    <Compile Include="Museus.cs" />
+    <Compile Include="Parques.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="PrincipalAtracoesFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalAtracoesFORM.Designer.cs">
+      <DependentUpon>PrincipalAtracoesFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalBicicletasFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalBicicletasFORM.Designer.cs">
+      <DependentUpon>PrincipalBicicletasFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalCiclista_LocacaoFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalCiclista_LocacaoFORM.Designer.cs">
+      <DependentUpon>PrincipalCiclista_LocacaoFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalCiclofaixasFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalCiclofaixasFORM.Designer.cs">
+      <DependentUpon>PrincipalCiclofaixasFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalEstacoesFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalEstacoesFORM.Designer.cs">
+      <DependentUpon>PrincipalEstacoesFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalFORM.Designer.cs">
+      <DependentUpon>PrincipalFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalPessoasFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalPessoasFORM.Designer.cs">
+      <DependentUpon>PrincipalPessoasFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurantes.cs" />
+    <Compile Include="RestaurantesDAO.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CadastrarAtracoesFORM.resx">
+      <DependentUpon>CadastrarAtracoesFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarBicicletasFORM.resx">
+      <DependentUpon>CadastrarBicicletasFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarCiclista_LocacaoFORM.resx">
+      <DependentUpon>CadastrarCiclista_LocacaoFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarCiclofaixasFORM.resx">
+      <DependentUpon>CadastrarCiclofaixasFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarEstacoesFORM.resx">
+      <DependentUpon>CadastrarEstacoesFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarPessoaFORM.resx">
+      <DependentUpon>CadastrarPessoaFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalAtracoesFORM.resx">
+      <DependentUpon>PrincipalAtracoesFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalBicicletasFORM.resx">
+      <DependentUpon>PrincipalBicicletasFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalCiclista_LocacaoFORM.resx">
+      <DependentUpon>PrincipalCiclista_LocacaoFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalCiclofaixasFORM.resx">
+      <DependentUpon>PrincipalCiclofaixasFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalEstacoesFORM.resx">
+      <DependentUpon>PrincipalEstacoesFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalFORM.resx">
+      <DependentUpon>PrincipalFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalPessoasFORM.resx">
+      <DependentUpon>PrincipalPessoasFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
